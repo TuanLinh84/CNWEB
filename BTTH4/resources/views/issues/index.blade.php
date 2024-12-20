@@ -297,13 +297,15 @@ $(document).ready(function(){
                         <th>Thời gian báo cáo</th>
                         <th>Mức độ sự cố</th>
                         <th>Trạng thái hiện tại</th>
+						<th>Thao tác</th>
 					</tr>
 				</thead>
 				<tbody>
                     @foreach ($issues as $issue)
                         <tr>
                             <td>{{ $issue->id }}</td>
-                            <td>{{ $issue->computer->computer_name }} {{ $issue->computer->model}}</td>
+                            <td>{{ $issue->computer->computer_name }}</td>
+							<td>{{ $issue->computer->model}}</td>
                             <td>{{ $issue->reported_by }}</td>
                             <td>{{ $issue->reported_date }}</td>
                             <td>{{ $issue->urgency }}</td>
